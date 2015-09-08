@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hola">Y yo soy otra Actividad</string>
+    <string name="enviar">Click Me :D</string>
+    <string name="activity1">Hola! \n Yo soy una Actividad</string>
+</resources>

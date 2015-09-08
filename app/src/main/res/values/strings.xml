@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Emulador</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="uam">Universidad Autonoma Metropolitana</string>
+    <string name="curso">Certificacion Android Developer Jr.</string>
+    <string name="hola">Hola Yo soy una Actividad</string>
+    <string name="enviar">Click Me :D</string>
+    <string name="nombre">Nombre</string>
+    <string name="correo">Correo</string>
+    <string name="hintn">Escribe tu nombre</string>
+    <string name="hintc">Escribe tu correo</string>
+    <string name="activity1">Hola! \n Yo soy una Actividad</string>
+    <string name="title_activity_tercera_actividad">TerceraActividad</string>
+
+</resources>
