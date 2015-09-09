@@ -63,22 +63,18 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
         android:hint="@string/hintn"
         android:ems="10"
         android:id="@+id/edt_nombre"
         android:layout_alignTop="@+id/tv_nombre"
         android:layout_toEndOf="@+id/tv_nombre" />
-
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textEmailAddress"
         android:hint="@string/hintc"
-        android:ems="10"
         android:id="@+id/edt_correo"
         android:layout_centerVertical="true"
-        android:layout_alignEnd="@+id/edt_nombre" />
+        android:layout_alignStart="@+id/edt_nombre" />
 
 
 </RelativeLayout>

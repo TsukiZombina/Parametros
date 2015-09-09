@@ -9,36 +9,34 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity  {
 
     // Create a new variable as a new widgets
     private Button enviar;
-    private EditText Nombre;
-    private EditText Correo;
+    EditText edt_nombre;
+    EditText edt_correo;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        //Set layout by id to my widgets
-        Button enviar = (Button)findViewById(R.id.btn_enviar);
-        Nombre = (EditText)findViewById(R.id.edt_nombre);
-        Correo = (EditText)findViewById(R.id.edt_correo);
-
+        enviar = (Button)findViewById(R.id.btn_enviar);
         //Set listeners
 
         enviar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 Intent i = new Intent(getApplicationContext(), SegundoActivity.class);
 
-                String nombre = Nombre.getText().toString();
-                String correo = Correo.getText().toString();
+                edt_nombre=(EditText) findViewById(R.id.edt_nombre);
+                edt_correo=(EditText) findViewById(R.id.edt_correo);
 
-                i.putExtra("Nombre", nombre);
-                i.putExtra("Correo", correo);
+                String nombre = edt_nombre.getText().toString();
+                String correo = edt_correo.getText().toString();
 
-
+                i.putExtra("Nombre",nombre);
+                i.putExtra("Correo",correo);
 
                 startActivity(i);
 

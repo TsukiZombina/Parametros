@@ -4,35 +4,37 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.EditText;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 /**
  * Created by monsh on 08/09/2015.
  */
 public class SegundoActivity extends AppCompatActivity {
 
-    EditText edt_name;
-    EditText edt_mail;
+    TextView tv_name;
+    TextView tv_mail;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_segundo);
+        //Corregi los id's por que enlazaba los de la primera actividad y usaba EditText en lugar de TextViews
+        tv_name = (TextView)findViewById(R.id.tv_name);
+        tv_mail =  (TextView)findViewById(R.id.tv_mail);
 
-         edt_name = (EditText) findViewById(R.id.edt_nombre);
-         edt_mail = (EditText) findViewById(R.id.edt_correo);
+        Intent intent = getIntent();
+        Bundle bundle = intent.getExtras();
 
-        //Aqui voy a cachar los extra con el bundle zip
-        Intent i = getIntent();
-        Bundle bundle = i.getExtras();
+        if (bundle !=null){
 
-        if (bundle != null) {
             String name = (String) bundle.get("Nombre");
-            edt_name.setText(name);
+            tv_name.setText(name);
 
-            String mail = (String) bundle.get("Correo");
-            edt_mail.setText(mail);
+            String correo = (String) bundle.get("Correo");
+            tv_mail.setText(correo);
         }
 
-        }
-}
+} }
